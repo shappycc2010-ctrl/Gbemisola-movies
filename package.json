@@ -11,3 +11,9 @@
     "concurrently": "^8.0.1"
   }
 }
+"scripts": {
+  "install-all": "npm install --prefix client && npm install --prefix server",
+  "build": "npm run build --prefix client",
+  "start": "node server/server.js",
+  "dev": "concurrently \"npm start --prefix server\" \"npm run dev --prefix client\""
+}
